@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Newsreader&display=swap" rel="stylesheet">
+    <style>
+        #confirmation {
+            margin-top: 100px; 
+        }
+
+        .confirmation-details {
+            padding-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="images/logo.png" alt="Pampered Paws Logo" class="logo">
+            <h1>Pampered Paws Grooming Services</h1>
+            <nav class="navigation">
+                <a href="#">Our Team</a>
+                <a href="#">Bookings</a>
+                <a href="#">Services</a>
+            </nav>
+            <div class="hours-of-operation">
+                <p>Hours of Operation</p>
+                <p>Monday-Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+                <a href="#">Sign up</a>
+            </div>
+        </header>
+        
+        <section id="confirmation">
+            <h2>Booking Confirmed</h2>
+            <div class="confirmation-details">
+                <p>Thank you for booking with Pampered Paws Grooming!</p>
+                <p>Your appointment has been successfully scheduled.</p>
+                <div class="appointment-details">
+                    <h3>Appointment Details:</h3>
+                    <p id="service"></p>
+                    <p id="petName"></p>
+                    <p id="groomer"></p>
+                    <p id="dateTime"></p>
+                </div>
+                <div class="customer-details">
+                    <h3>Customer Details:</h3>
+                    <p id="ownerName"></p>
+                    <p id="email"></p>
+                </div>
+                <div class="additional-instructions">
+                    <h3>Additional Instructions:</h3>
+                    <p>If you need to reschedule or cancel, please contact us at least 24 hours in advance.</p>
+                    <p>Confirmation number is: <strong>ABC123</strong></p>
+       

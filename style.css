@@ -1,28 +1,170 @@
+* {
+  box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
+  font-size: 19.6px; /* Increased by 40% */
+  font-family: 'Inter', sans-serif;
 }
-
-h1, h2 {
-    margin: 0;
+.header {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
 }
-
-.map-placeholder, .logo-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 200px;
 }
-
-.nav-link {
-    color: #000;
-    font-weight: bold;
+.hours-of-operation {
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  right: 20px;
+  text-align: right;
 }
-
-.nav-link:hover {
-    color: #007bff;
+.navigation {
+  display: inline-block;
 }
-
+.navigation a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 22.4px; /* Increased by 40% */
+}
+.auth-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.auth-links a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 22.4px; /* Increased by 40% */
+}
+#services {
+  background: url("services-background.png") center center / cover no-repeat;
+  padding: 50px;
+}
+.service {
+  background: #e6d2ff;
+  padding: 20px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.service img {
+  width: 400px;
+  height: 200px;
+  margin-right: 20px;
+}
+.service-info {
+  display: flex;
+  flex-direction: column;
+}
+.service h3 {
+  font-size: 28px; /* Increased by 40% */
+}
+.price {
+  font-size: 25.2px; /* Increased by 40% */
+  color: #333;
+}
+.service p {
+  font-size: 22.4px; /* Increased by 40% */
+  color: #6d6d6d;
+}
+#booking {
+  background: url("booking-background.png") center center / cover no-repeat;
+  padding: 50px;
+  border-radius: 24px;
+  background-color: #e9dafc;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 19.6px; /* Increased by 40% */
+}
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 19.6px; /* Increased by 40% */
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 19.6px; /* Increased by 40% */
+}
 .btn-primary {
-    background-color: #8a2be2;
-    border-color: #8a2be2;
+  background-color: #5a67d8;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: #a0aec0;
+  color: #fff;
+}
+#team-members {
+  background: url("team-background.png") center center / cover no-repeat;
+  padding: 50px;
+}
+.team-member {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.team-member img {
+  width: 400px;
+  height: 200px;
+  margin-right: 20px;
+}
+.team-info {
+  display: flex;
+  flex-direction: column;
+}
+#location {
+  text-align: center;
+  padding: 50px;
+}
+#location img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+#location .location-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#location .contact-info {
+  max-width: 300px;
+}
+
+#location .contact-info h3 {
+  margin-bottom: 10px;
+  font-size: 33.6px; /* Increased by 40% */
+}
+
+#location .contact-info p {
+  margin: 5px 0;
+  font-size: 25.2px; /* Increased by 40% */
+}
+
+#location .contact-info a {
+  color: #333;
+  text-decoration: none;
+  font-size: 25.2px; /* Increased by 40% */
+}
+
+#location .contact-info a:hover {
+  text-decoration: underline;
 }

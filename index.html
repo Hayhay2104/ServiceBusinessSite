@@ -4,73 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pampered Paws Grooming Services</title>
-    <!-- Link to Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link to your custom CSS -->
+    <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Newsreader&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
-        <div class="row">
-            <div class="col-6">
-                <h1>Pampered Paws</h1>
-                <h2>Grooming Services</h2>
-            </div>
-            <div class="col-6 text-end">
-                <a href="#" class="btn btn-link">Log in</a>
-                <a href="#" class="btn btn-primary">Sign up</a>
-            </div>
-        </div>
-        
-        <!-- Main Content Section -->
-        <div class="row my-4">
-            <div class="col-md-6">
-                <p><strong>Located at</strong></p>
-                <div class="map-placeholder" style="background-color: #ccc; width: 100%; height: 200px;">(Picture of a map)</div>
-                <p>1234 Pet Haven Lane, Ottawa Ont.</p>
-                <button class="btn btn-primary mt-2">Book now</button>
-            </div>
-            <div class="col-md-6 text-center">
-                <div class="logo-placeholder" style="background-color: #ccc; width: 100%; height: 200px;">(Logo)</div>
-            </div>
-        </div>
-
-        <!-- Navigation Section -->
-        <div class="row">
-            <div class="col-md-3">
-                <nav class="nav flex-column">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">Services</a>
-                    <a class="nav-link" href="#">Bookings</a>
-                    <a class="nav-link" href="#">Our Team</a>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Footer Section -->
-        <div class="row my-4">
-            <div class="col-md-4">
-                <p><strong>Contact Us</strong></p>
-                <p>Phone: (555) 987-6543</p>
-                <p>info@pamperedpawsgrooming.com</p>
-            </div>
-            <div class="col-md-4">
-                <p><strong>Hours of Operation</strong></p>
+        <header class="header">
+            <img src="images/logo.png" alt="Pampered Paws Logo" class="logo">
+            <h1>Pampered Paws Grooming Services</h1>
+            <nav class="navigation">
+                <a href="#">Our Team</a>
+                <a href="#">Bookings</a>
+                <a href="#">Services</a>
+            </nav>
+            <div class="hours-of-operation">
+                <p>Hours of Operation</p>
                 <p>Monday-Friday: 9:00 AM - 6:00 PM</p>
                 <p>Saturday: 10:00 AM - 4:00 PM</p>
                 <p>Sunday: Closed</p>
             </div>
-            <div class="col-md-4">
-                <p><strong>About Us</strong></p>
-                <p>(Mission Statement)</p>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+                <a href="#">Sign up</a>
             </div>
-        </div>
+        </header>
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service">
+                <img src="images/bath.png" alt="Bathing">
+                <div class="service-info">
+                    <h3>Bathing</h3>
+                    <p class="price">$21.99</p>
+                    <p>Deep cleansing bath with pet-safe shampoo. Coat conditioning and blow-dry.</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="images/teeth.png" alt="Teeth Brushing">
+                <div class="service-info">
+                    <h3>Teeth Brushing</h3>
+                    <p class="price">$15.00</p>
+                    <p>Dental hygiene service to maintain healthy gums and teeth.</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="images/haircut.png" alt="Haircut and Styling">
+                <div class="service-info">
+                    <h3>Haircut and Styling</h3>
+                    <p class="price">$29.99</p>
+                    <p>Full-body haircut tailored to breed-specific styles or owner preferences. Trim around eyes, paws, and sanitary areas.</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="images/nail.png" alt="Nail Trimming">
+                <div class="service-info">
+                    <h3>Nail Trimming</h3>
+                    <p class="price">$15.00</p>
+                    <p>Clipping and filing of nails to a safe length.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Create a Booking</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Services</label>
+                    <div id="servicesContainer">
+                        <div class="form-group service-group">
+                            <select id="services1" class="form-control">
+                                <option value="Bathing">Bathing</option>
+                                <option value="Teeth Brushing">Teeth Brushing</option>
+                                <option value="Haircut and Styling">Haircut and Styling</option>
+                                <option value="Nail Trimming">Nail Trimming</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="addServiceBtn">Add</button>
+                </div>
+                <div class="form-group">
+                    <label for="teamMember">Team Member (Optional)</label>
+                    <select id="teamMember" class="form-control">
+                        <option value="Sarah Mitchell">Sarah Mitchell</option>
+                        <option value="John Reynolds">John Reynolds</option>
+                        <option value="Emily Nguyen">Emily Nguyen</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petName">Pet’s Name</label>
+                    <input type="text" id="petName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="additionalPet">Additional Pet’s Name (Optional)</label>
+                    <input type="text" id="additionalPet" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="date">Select Date</label>
+                    <input type="date" id="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Select Time</label>
+                    <input type="time" id="time" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+            </form>
+        </section>
+        
+        <section id="team-members">
+            <h2>Team Members</h2>
+            <div class="team-member">
+                <img src="images/team2.png" alt="Sarah Mitchell">
+                <div class="team-info">
+                    <h3>Sarah Mitchell</h3>
+                    <p>Experience: 10 years in professional pet grooming</p>
+                    <p>Description: Sarah Mitchell is our lead groomer with over a decade of experience in the pet grooming industry. She is a certified master groomer who has worked with a wide variety of breeds, both dogs and cats.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/team1.png" alt="John Reynolds">
+                <div class="team-info">
+                    <h3>John Reynolds</h3>
+                    <p>Experience: 2 years in professional pet grooming</p>
+                    <p>Description: John Reynolds brings 8 years of dedicated experience to our team, specializing in creating stylish and comfortable grooming experiences for dogs of all sizes and breeds. With a passion for animal care and a keen eye for details, he consistently delivers exceptional results.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/team3.png" alt="Emily Nguyen">
+                <div class="team-info">
+                    <h3>Emily Nguyen</h3>
+                    <p>Experience: 3 years in professional pet grooming</p>
+                    <p>Description: Emily Nguyen is a skilled groomer with 5 years of experience, known for her gentle approach and attention to pet comfort. With expertise in handling nervous or anxious animals, Emily creates a calm and relaxing environment, building trust with every furry client.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="location">
+            <h2>Our Location</h2>
+            <img src="images/map.png" alt="Map to Pampered Paws">
+            <p>1234 Pet Haven Lane, Ottawa, ON, K1A 0B1, Canada</p>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: (555) 987-6543</p>
+                <p>Email: <a href="mailto:info@pamperedpawsgrooming.com">info@pamperedpawsgrooming.com</a></p>
+            </div>
+        </section>
     </div>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Link to your custom JavaScript -->
+    <!-- JavaScript file -->
     <script src="script.js"></script>
+    <script>
+        let serviceCount = 1;
+
+        document.getElementById('addServiceBtn').addEventListener('click', function() {
+            if (serviceCount < 4) {
+                serviceCount++;
+                const servicesContainer = document.getElementById('servicesContainer');
+                const newServiceGroup = document.createElement('div');
+                newServiceGroup.classList.add('form-group', 'service-group');
+                newServiceGroup.innerHTML = `
+                    <select id="services${serviceCount}" class="form-control">
+                        <option value="Bathing">Bathing</option>
+                        <option value="Teeth Brushing">Teeth Brushing</option>
+                        <option value="Haircut and Styling">Haircut and Styling</option>
+                        <option value="Nail Trimming">Nail Trimming</option>
+                    </select>
+                `;
+                servicesContainer.appendChild(newServiceGroup);
+            }
+        });
+    </script>
 </body>
 </html>
